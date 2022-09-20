@@ -5,6 +5,7 @@ release: build run
 debug: debugbuild debugrun
 
 libainet.so:
+ainet.h:
 
 build: *
 	gcc main.c -o $(NAME) -L. -lainet -O3 -s
