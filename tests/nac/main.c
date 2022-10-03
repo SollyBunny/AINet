@@ -173,8 +173,8 @@ int main() {
 
 	srand(time(NULL));
 
-	#define NUMNETS 50
-	Nets *net = ng_init(NUMNETS, 9, 9, 3, 7);
+	#define NUMNETS 100
+  Nets *net = ng_init(NUMNETS, 9, 9, 2, 20);
 	ng_setrand(net);
 	for (unsigned int i = 0; i < NUMNETS; ++i) {
 		net->net[i]->data = (void*)0;

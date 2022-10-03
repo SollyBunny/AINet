@@ -8,10 +8,10 @@ libainet.so:
 ainet.h:
 
 build: *
-	gcc main.c -o $(NAME) -L. -lainet -O3 -s
+	gcc main.c -o $(NAME) -L. -lainet -I../.. -O3 -s
 
 debugbuild: *
-	gcc main.c -o $(NAME) -L. -lainet -Wall -g 
+	gcc main.c -o $(NAME) -L. -lainet -I../.. -Wall -g 
 
 run: *
 	LD_LIBRARY_PATH=. ./$(NAME)
