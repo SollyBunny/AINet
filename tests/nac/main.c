@@ -156,7 +156,7 @@ int playgame(Net *p1, Net *p2) {
 			case b_X:
 			case b_O:
         if (outcome = b_X) return 1;
-        return -2;
+        return -1;
 		}
 		//b_print(&b);
 
@@ -193,7 +193,7 @@ int main() {
 				for (unsigned int m = 0; m < NUMNETS; ++m) {
 					static long outcome;
 					outcome = (long)playgame(net->net[i], net->net[m]);
-          if (outcome == 0)
+          if (outcome == 0) {}
 					net->net[i]->data = (void*)((long)net->net[i]->data + outcome);
 					//net->net[m]->data = (void*)((long)net->net[m]->data - outcome);
 				}

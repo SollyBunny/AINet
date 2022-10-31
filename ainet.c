@@ -92,10 +92,9 @@ N_TYPE *n_sortout(Net *net) {
 }
 // Slightly mutates a net's weights
 void n_mutate(Net *net) {
-	for (unsigned int i = 0; i < net->numconnections; ++i) {
-		if (rand() % 10 > 8)
-			net->connections[i] = N_RAND();// >> (sizeof(N_TYPE) / 2);
-	} 
+  for (unsigned int i = 0; i < 10; ++i) {
+    net->connections[rand() % net->numconnections] =  N_RAND();
+  }
 }
 
 /*
